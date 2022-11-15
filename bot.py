@@ -50,7 +50,11 @@ async def on_message(msg):
 
     if msg.content.startswith("<@!" + DISCORD_BOT_ID + "> ") or msg.content.startswith("<@" + DISCORD_BOT_ID + ">"):
         response = ask(msg.content.split(" ", 1)[1])
-        print(response)
+        print("----------------------------------------------------")
+        print("[ " + message.author.name + " ]>> " + msg.content)
+        print(" ")
+        print("[ " + BOT_NAME + " ]>> " + response)
+        print(" ")
         await msg.channel.send(response)
 
 
