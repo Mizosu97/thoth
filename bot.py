@@ -41,7 +41,7 @@ def ask(question, chat_log=None):
 
 @client.event
 async def on_ready():   
-    print("Were ready to rumble!")
+    print(BOT_NAME + " is now active!")
 
 @client.event
 async def on_message(msg):
