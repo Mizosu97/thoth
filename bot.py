@@ -2,9 +2,9 @@ import os
 import discord
 import openai
 
-openai.api_key = "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"
+openai.api_key = ""
 
-TOKEN = "MTA0MTg0NjM2ODY4MTA3NDcxOA.Gt5xDx.F3pJCNZSMcsJ0vp35-TeIAByq_3lRT5ZomTU4U"
+TOKEN = ""
 
 intents = discord.Intents.all()
 client = discord.Client(intents=intents)
@@ -37,6 +37,7 @@ async def on_message(msg):
     if msg.content.startswith("<@!1041846368681074718> ") or msg.content.startswith("<@1041846368681074718>"):
         response = ask(msg.content.split(" ", 1)[1])
         print(response)
+        await msg.channel.send(response)
 
 
 client.run(TOKEN)
