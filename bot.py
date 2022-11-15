@@ -2,26 +2,42 @@ import os
 import discord
 import openai
 
-openai.api_key = ""
+openai.api_key = "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"
 
-TOKEN = ""
-client = discord.Client()
+TOKEN = "MTA0MTg0NjM2ODY4MTA3NDcxOA.Gt5xDx.F3pJCNZSMcsJ0vp35-TeIAByq_3lRT5ZomTU4U"
+
+intents = discord.Intents.all()
+client = discord.Client(intents=intents)
+
 
 completion = openai.Completion()
 
-start_chat_log = " "
+scl = ""
 
 def ask(question, chat_log=None):
     if chat_log is None:
-        chat_log = start_chat_log
-    prompt = f'{chat_log}User: {question}\nmwaoo: '
-    response = completion.create(prompt=prompt, engine="davinci", stop=['User', '\n', 'mwaoo'], temperature=0.9, top_p=1, frequency_penalty)
+        chat_log = scl
+    prompt = f'{chat_log}User: {question}\nmeiosu: '
+    res = completion.create(prompt=prompt, engine="davinci", stop=['User', '\n', 'meiosu'], temperature=0.9, top_p=1, frequency_penalty=0.8, presence_penalty=0.1, best_of=1, max_tokens=512)
+    ans = res.choices[0].text.strip()
+    return ans
 
 
 
 
 @client.event
-async def on_ready():
+async def on_ready():   
     print("Were ready to rumble!")
 
+@client.event
+async def on_message(msg):
+    if msg.author == client.user:
+        return
+
+    if msg.content.startswith("<@!1041846368681074718> ") or msg.content.startswith("<@1041846368681074718>"):
+        response = ask(msg.content.split(" ", 1)[1])
+        print(response)
+
+
+client.run(TOKEN)
 
