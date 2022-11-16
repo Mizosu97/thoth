@@ -40,7 +40,9 @@ def ask(question, auth, chat_log=None):
 
 
 @client.event
-async def on_ready():   
+async def on_ready():
+    print(" ")
+    print(" ")
     print(BOT_NAME + " is now active!")
 
 @client.event
