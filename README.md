@@ -1,10 +1,10 @@
 # Thoth
 
-*Thoth, (Greek), Egyptian Djhuty, in Egyptian religion, a god of the moon, of reckoning, of learning, and of writing*
+*Thoth, (Greek), Egyptian Djhuty, in Egyptian religion, a god of the moon, of reckoning, of learning, and of writing.*
 
 **Thoth** is a framework for setting up AI chatbots for Discord. It uses OpenAI's GPT-3 language model for generating human-like conversation realistic enough to pass the Turing test.
 
-The more you converse with Thoth, the more it learns. It saves the chatlogs, and looks back on them for reference. Thoth will learn it's own name, and your Discord Username without being directly told what it is.
+The more you converse with Thoth, the more it learns. It saves the chatlogs, and looks back on them for reference. Thoth will learn it's own name, and your Discord username without being directly told what it is.
 
 Multiple people are able to converse with Thoth at the same time. It learns to differentiate different people, and even learns their usernames.
 
@@ -17,7 +17,7 @@ Thoth can be configured exactly how you want it. You can change everything from 
 
 ## Prequisites
 - Create a discord bot application, and get it's token. Make one [here](https://discord.com/login?redirect_to=%2Fdevelopers%2Fapplications). Make sure the application has message content intent privileges. Invite the bot to a server.
-- Create an openAI account, then get an API key [here](https://beta.openai.com/account/api-keys).
+- Create an [OpenAI account](https://openai.com/), then get an API key [here](https://beta.openai.com/account/api-keys). Creating an account is free.
 - Install the `git` and `python` packages provided by your distribution.
 - Install the `discord` and `openai` pip packages with `pip install discord openai`
 
