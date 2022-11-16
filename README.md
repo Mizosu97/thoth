@@ -1,4 +1,5 @@
 # Thoth
+Developed by [The Duat](https://theduat.neocities.org).
 
 *Thoth, (Greek), Egyptian Djhuty, in Egyptian religion, a god of the moon, of reckoning, of learning, and of writing.*
 
