@@ -28,10 +28,10 @@ client = discord.Client(intents=intents)
 completion = openai.Completion()
 
 
-def ask(question, chat_log=None):
+def ask(question, auth, chat_log=None):
     if chat_log is None:
         chat_log = BOT_DESCRIPTION
-    prompt = f'{chat_log}User: {question}\n{BOT_NAME}: '
+    prompt = f'{chat_log}User {auth}: {question}\n{BOT_NAME}: '
     res = completion.create(prompt=prompt, engine="davinci", stop=['User', '\n', BOT_NAME], temperature=0.9, top_p=1, frequency_penalty=0.8, presence_penalty=0.1, best_of=1, max_tokens=512)
     ans = res.choices[0].text.strip()
     return ans
@@ -49,9 +49,9 @@ async def on_message(msg):
         return
 
     if msg.content.startswith("<@!" + DISCORD_BOT_ID + "> ") or msg.content.startswith("<@" + DISCORD_BOT_ID + ">"):
-        response = ask(msg.content.split(" ", 1)[1])
+        response = ask(msg.content.split(" ", 1)[1], msg.author.name)
         print("----------------------------------------------------")
-        print("[ " + message.author.name + " ]>> " + msg.content)
+        print("[ " + msg.author.name + " ]>> " + msg.content)
         print(" ")
         print("[ " + BOT_NAME + " ]>> " + response)
         print(" ")
