@@ -5,15 +5,15 @@ import openai
 
 # configuration
 
-BOT_NAME = "Meiosu"
+BOT_NAME = ""
 
-BOT_DESCRIPTION = "Meiosu is a smug, intelligent, and cute AI female chat bot."
+BOT_DESCRIPTION = ""
 
-openai.api_key = "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"
+openai.api_key = ""
 
-DISCORD_TOKEN = "MTA0MTg0NjM2ODY4MTA3NDcxOA.GJ145q.JsTFR7K9G0HWYtveGpakAWdySMV-IACTG8FkgE"
+DISCORD_TOKEN = ""
 
-DISCORD_BOT_ID = "1041846368681074718"
+DISCORD_BOT_ID = ""
 
 # configuration
 
