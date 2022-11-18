@@ -3,11 +3,15 @@ Developed by [The Duat](https://theduat.neocities.org).
 
 *Thoth, (Greek), Egyptian Djhuty, in Egyptian religion, a god of the moon, of reckoning, of learning, and of writing.*
 
-**Thoth** is a framework for setting up AI chatbots for Discord. It uses OpenAI's GPT-3 language model for generating human-like conversation realistic enough to pass the Turing test.
+**Thoth** is a framework for setting up AI chatbots for Discord. It uses OpenAI's GPT-3 language model for generating human-like conversation realistic enough to pass the Turing test\*.
 
 The more you converse with Thoth, the more it learns. It saves the chatlogs, and looks back on them for reference. Thoth will learn it's own name, and your Discord username without being directly told what it is.
 
 Multiple people are able to converse with Thoth at the same time. It learns to differentiate different people, and even learns their usernames.
+
+Thoth sometimes struggles with remembering certain elements of the conversation.
+
+\*Depends on the BOT\_DESCRIPTION.
 
 
 # How do I set it up?
