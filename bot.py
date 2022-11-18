@@ -5,15 +5,15 @@ import openai
 
 # configuration
 
-BOT_NAME = ""
+BOT_NAME = "Meiosu"
 
-BOT_DESCRIPTION = ""
+BOT_DESCRIPTION = "Meiosu is a smug, intelligent, and cute AI female chat bot."
 
-openai.api_key = ""
+openai.api_key = "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"
 
-DISCORD_TOKEN = ""
+DISCORD_TOKEN = "MTA0MTg0NjM2ODY4MTA3NDcxOA.GJ145q.JsTFR7K9G0HWYtveGpakAWdySMV-IACTG8FkgE"
 
-DISCORD_BOT_ID = ""
+DISCORD_BOT_ID = "1041846368681074718"
 
 # configuration
 
@@ -30,7 +30,7 @@ completion = openai.Completion()
 chat_log = BOT_DESCRIPTION
 def ask(question, auth, chats):
     prompt = f'{chats}\nUser {auth}: {question}\n{BOT_NAME}: '
-    res = completion.create(prompt=prompt, engine="davinci", stop=['User', '\n', BOT_NAME], temperature=0.9, top_p=1, frequency_penalty=0.8, presence_penalty=0.1, best_of=1, max_tokens=512)
+    res = completion.create(prompt=prompt, engine="davinci", stop=['User'], temperature=0.9, top_p=1, frequency_penalty=0.8, presence_penalty=0.1, best_of=1, max_tokens=512)
     ans = res.choices[0].text.strip()
     global chat_log 
     chat_log = chat_log + f'\nUser {auth}: {question}'
